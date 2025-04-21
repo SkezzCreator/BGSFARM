@@ -1,0 +1,32 @@
+getgenv().Settings = {
+    ["Egg Settings"] = {
+        OpenEggs = true,
+        Egg = "Infinity Egg",
+        --// Supports ANY egg ("Infinity Egg", ...). Keep "Best" for new accounts.
+
+        ["Notifications"] = {
+            Webhook = "https://discord.com/api/webhooks/1033467716612390942/yER9UYM5i7dykCUZl3OcDG_utZJG5FE65_HvYcbichsNuqOwQm0GwQ1X3J7WsPmRfHc_",
+            DiscordID = "923570642434002944",
+            Difficulty = "100k", --// Minimum Difficulty for Webhook Notifications
+        },
+
+        ["Rifts"] = {
+            FindRifts = true,
+            SortByMultiplier = true, 
+            --// true --> Sort by Multiplier out of ALL Targetted Rifts.
+            --// false --> Sort by Multiplier out of BEST Targetted Rifts.
+
+            Targets = {"Aura Egg"},
+            --// Targets = {} will automatically find the Top 3 BEST Rifts to hatch.
+        },
+    },
+
+    ["Debug"] = {
+        DisableUI = true,
+        FPSLimit = 5
+    },
+    ["Trade Users"] = {
+        "BGSINFISELL"
+        },
+}
+loadstring(game:HttpGet("https://system-exodus.com/scripts/BGSI/OneClick.lua"))()
